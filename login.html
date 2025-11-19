@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Login Carris+</title>
+
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			padding-top: 70px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.top-header {
+			width: 100%; /* Ocupa toda a largura do ecrã */
+			background-color: white; /* Faixa branca */
+			padding: 7px 0 5px 10px; /* Espaçamento vertical (cima/baixo) */
+			text-align: left;
+			position: absolute; /* Para soltar do container e colocá-lo no topo */
+			top: 0; /* Alinha no topo */
+			box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra subtil para destaque */
+		}
+
+		.header-logo {
+			max-height: 100px; /* Altura máxima para o logótipo */
+			width: auto;
+			display: inline-block; /* Garantir que se comporta corretamente */
+    		margin: 0;
+		}
+
+		.container {
+			background: white;
+			padding: 40px;
+			width: 380px;
+			border-radius: 8px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 22px;
+			margin-bottom: 5px;
+		}
+
+		p.sub {
+			color: #555;
+			font-size: 14px;
+			margin-bottom: 25px;
+    	}
+
+		label {
+			display: block;
+			text-align: left;
+			font-size: 14px;
+			margin-bottom: 5px;
+			color: #444;
+		}
+
+		input {
+			width: 100%;
+			border: none;
+			border-bottom: 1px solid #aaa;
+			padding: 10px 2px;
+			font-size: 16px;
+			margin-bottom: 20px;
+			outline: none;
+		}
+
+		button {
+			width: 100%;
+			padding: 12px;
+			background-color: #FFB300; /* amarelo forte */
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			color: white;
+			cursor: pointer;
+		}
+
+		button:hover {
+        	background-color: #FFA000;
+    	}
+
+		.divider {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			margin: 25px 0;
+		}
+
+		.divider-line {
+			flex: 1;
+			height: 1px;
+			background: #ccc;
+    	}
+
+		.divider-text {
+			margin: 0 10px;
+			background: #e6e6e6;
+			padding: 5px 10px;
+			border-radius: 50%;
+			font-size: 12px;
+			color: #666;
+		}
+
+		.social {
+			display: flex;
+			justify-content: center;
+			gap: 15px;
+		}
+
+		.social img {
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			background: white;
+		}
+
+		.after-login-section {
+			text-align: center;
+			margin-top: 20px;
+			font-family: Arial, sans-serif;
+		}
+
+		.forgot-pass {
+			color: #555;
+			cursor: pointer;
+			margin-bottom: 25px;
+		}
+
+		.signup-text {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+
+		.signup-link {
+			color: black;
+			font-weight: bold;
+			text-decoration: underline;
+		}
+
+		.or-text {
+			color: #666;
+			margin: 25px 0;
+		}
+
+		.social-btn {
+			width: 300px;
+			padding: 12px;
+			margin: 8px auto;
+			display: flex;
+			justify-content: left;
+			align-items: center;
+			gap: 10px;
+			border: 1px solid black;
+			background: white;
+			font-size: 16px;
+			cursor: pointer;
+			color: black;
+		}
+
+		.social-btn img {
+			width: 25px;
+			height: 25px;
+		}
+
+		.social-btn:hover {
+			background: #f5f5f5;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<header class="top-header">
+		<img src="img/LogTransp.png" alt="Logótipo Carris+" class="header-logo">
+	</header>
+
+	<div class="container">
+
+		<h1>Iniciar Sessão</h1>
+		<p class="sub">Preencha o email e a password para iniciar sessão.</p>
+
+		<form action="/login_process" method="POST">
+
+			<input type="email" id="email" placeholder="Introduz o teu email" required>
+			<br>
+			<input type="password" placeholder="Introduz a tua Palavra-Passe" required>
+			<button type="submit">Iniciar Sessão</button>
+
+		</form>
+
+	<div class="after-login-section">
+
+		<p class="forgot-pass">Esqueci-me da Palavra-Passe</p>
+
+		<p class="signup-text">
+			Ainda não tem conta?
+			<a href="criarConta.html" class="signup-link">Criar conta</a>
+		</p>
+
+		<p class="or-text">
+			Ou, se preferir, também pode iniciar sessão com
+		</p>
+
+		<button class="social-btn google">
+			<img src="https://developers.google.com/identity/images/g-logo.png">
+			Entrar com Google
+		</button>
+
+		<button class="social-btn facebook">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png">
+			Entrar com Facebook
+		</button>
+
+	</div>
+	</div>
+
+
+</body>
+
+</html>
